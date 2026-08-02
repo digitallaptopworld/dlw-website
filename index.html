@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Digital Laptop World</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <img src="banner.jpg" width="100%">
+    <h1>Digital Laptop World</h1>
+    <p>Tech & Gaming World</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Action</a>
+    <a href="#">Adventure</a>
+    <a href="#">Arcade</a>
+    <a href="#">Racing</a>
+    <a href="#">Software</a>
+    <a href="#">Contact</a>
+</nav>
+
+<section>
+
+    <h2>Latest Games 🎮</h2>
+
+    <input type="text" id="search" placeholder="Search Games..." onkeyup="searchGame()">
+
+
+    <div class="card">
+
+        <img src="god-of-war.jpg" width="300">
+
+        <h3>God Of War</h3>
+
+        <p>Action Adventure Game</p>
+
+        <p>Developer: Santa Monica Studio</p>
+
+        <a href="sample.pdf" download>
+            <button>Download PDF</button>
+        </a>
+
+    </div>
+
+
+
+    <div class="card">
+
+        <img src="wwe.jpeg" width="300">
+
+        <h3>WWE SmackDown</h3>
+
+        <p>Wrestling Game</p>
+
+        <p>Developer: Yuke's</p>
+
+        <a href="sample.pdf" download>
+            <button>Download PDF</button>
+        </a>
+
+    </div>
+
+
+</section>
+
+
+<footer>
+    <p>© 2026 Digital Laptop World</p>
+</footer>
+
+
+<script>
+
+function searchGame() {
+
+    let input = document.getElementById("search").value.toLowerCase();
+
+    let cards = document.getElementsByClassName("card");
+
+
+    for (let i = 0; i < cards.length; i++) {
+
+        let title = cards[i].getElementsByTagName("h3")[0];
+
+        if (title.innerHTML.toLowerCase().includes(input)) {
+
+            cards[i].style.display = "";
+
+        } else {
+
+            cards[i].style.display = "none";
+
+        }
+    }
+}
+
+</script>
+
+
+</body>
+</html>
